@@ -63,13 +63,19 @@ namespace Module_World_Color {
         let Green = (buff_G[1] & 0xff) << 8 | (buff_G[0] & 0xff);
         let Blue = (buff_B[1] & 0xff) << 8 | (buff_B[0] & 0xff);
 
-        if (Red > 4500) Red = 2300;
-        if (Green > 7600) Green = 4600;
-        if (Blue > 4600) Blue = 2700;
+        if (Red > 4000) Red = 4000;
+        if (Green > 7000) Green = 7000;
+        if (Blue > 4500) Blue = 4500;
 
-        val_red = Math.map(Red, 0, 2300, 0, 255);
-        val_green = Math.map(Green, 0, 4600, 0, 255);
-        val_blue = Math.map(Blue, 0, 2700, 0, 255);
+        val_red = Math.map(Red, 0, 4000, 0, 255);
+        val_green = Math.map(Green, 0, 7000, 0, 255);
+        val_blue = Math.map(Blue, 0, 4500, 0, 255);
+
+        //化成整数
+        val_red = Math.floor(val_red)
+        val_green = Math.floor(val_green)
+        val_blue = Math.floor(val_red)
+
 
         if (val_red > 255) val_red = 255;
         if (val_green > 255) val_green = 255;
