@@ -74,7 +74,7 @@ namespace Module_World_Color {
         //化成整数
         val_red = Math.floor(val_red)
         val_green = Math.floor(val_green)
-        val_blue = Math.floor(val_red)
+        val_blue = Math.floor(val_blue)
 
         if (val_red > 255) val_red = 255;
         if (val_green > 255) val_green = 255;
